@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exécuter une commande dans un conteneur</title>
+
+</head>
+<body>
+    <h1>Exécuter une commande dans un conteneur</h1>
+    <form action="/exec" method="post">
+        <label for="container">Sélectionnez un conteneur :</label>
+        <select id="container" name="container">
+            {% for container in containers %}
+            <option value="{{ container.id }}">{{ container.name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Suivant">
+    </form>
+
+
+</body>
+</html>

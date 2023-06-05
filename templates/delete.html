@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supprimer des conteneurs</title>
+</head>
+<body>
+    <h1>Supprimer des conteneurs</h1>
+    <form action="/delete" method="post">
+        <ul>
+            {% for container in containers %}
+            <li>
+                <input type="checkbox" name="containers" value="{{ container.id }}">
+                {{ container.name }}
+            </li>
+            {% endfor %}
+        </ul>
+        <input type="submit" value="Supprimer">
+    </form>
+</body>
+</html>
